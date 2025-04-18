@@ -10,11 +10,13 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "ap-south-1"
+  profile = "abhishek"
+
 }
 
 # Create a Ec2 machine
 resource "aws_instance" "my_ec2" {
-  ami           = "ami-07d40350020caee2c" # Amazon Linux 2 in us-east-1
+  ami           = "ami-080b1a55a0ad28c02" # Amazon Linux 2 in us-east-1
   instance_type = "t2.micro"
 
   tags = {
