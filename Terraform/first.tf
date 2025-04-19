@@ -18,7 +18,7 @@ provider "aws" {
 resource "aws_instance" "my_ec2" {
   ami           = "ami-080b1a55a0ad28c02" # Amazon Linux 2 in us-east-1
   instance_type = "t2.micro"
-
+  key_name = "${aws_key_pair.key.key_name}"
   tags = {
     Name = "MyFirstEC2"
   }
