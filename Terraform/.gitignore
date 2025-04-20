@@ -2,14 +2,13 @@
 .terraform/
 
 # Terraform state files
-*.tfstate
-*.tfstate.backup
+
 
 # Crash log files
 crash.log
 
 # Override files (useful for secrets or env-specific settings)
-*.tfvars
+
 *.tfvars.json
 override.tf
 override.tf.json
