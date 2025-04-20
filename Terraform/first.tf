@@ -9,18 +9,19 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "ap-south-1"
+  region  = "${var.region}"
   profile = "abhishek"
 
 }
 
 # Create a Ec2 machine
 resource "aws_instance" "my_ec2" {
-  ami           = "ami-080b1a55a0ad28c02" # Amazon Linux 2 in us-east-1
-  instance_type = "t2.micro"
-  key_name = "${aws_key_pair.key.key_name}"
+  ami                    = "${var.ami}" # Amazon Linux 2 in us-east-1
+  instance_type          = "${var.instancetype}"
+  key_name               = aws_key_pair.key.key_name
+  vpc_security_group_ids = ["${aws_security_group.allow_tls.id}"]
   tags = {
-    Name = "MyFirstEC2"
+    Name = "${var.tags}"
   }
 }
 

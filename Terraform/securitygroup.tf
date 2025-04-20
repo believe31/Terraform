@@ -24,8 +24,13 @@ resource "aws_security_group" "allow_tls" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  
-tags = {
+
+  tags = {
     Name = "allow_tls"
   }
+
+}
+output "security_group" {
+  value = aws_security_group.allow_tls.id
+
 }
