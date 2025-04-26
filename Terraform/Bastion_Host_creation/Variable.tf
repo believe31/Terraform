@@ -29,11 +29,11 @@ variable "prsubnets" {
   #default = ["10.0.101.0/24", "10.0.102.0/24"]
 
 }
-variable "azone" {
-  type = list(string)
-  #default = [ "ap-south-1a","ap-south-1b" ]
+#variable "azone" {
+# type = list(string)
+#default = [ "ap-south-1a","ap-south-1b" ]
 
-}
+#}
 variable "enable_nat_gateway" {
   type    = bool
   default = true
