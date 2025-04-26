@@ -1,0 +1,3 @@
+When referencing a file relative to the module location (e.g., for user_data, scripts, templates).
+
+Ensures portability across environments.
