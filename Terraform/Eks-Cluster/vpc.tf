@@ -22,7 +22,6 @@ module "vpc" {
   # VPC DNS Parameters
   enable_dns_hostnames = var.single_nat_gateway
   enable_dns_support   = var.single_nat_gateway
-  map_public_ip_on_launch=true
   public_subnet_tags = {
     Type = local.public_subnet_tags
   }
